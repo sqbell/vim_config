@@ -66,3 +66,21 @@ colorscheme solarized
 
 " tComment, faster commenting
 map <c-/> <c-_><c-_>
+
+set formatprg=par                 " paragraph formatter (keeps lines shorter than 72 columns)
+                                  " see http://vimcasts.org/episodes/formatting-text-with-par/
+" added 6 VIII 2011
+set smartcase
+
+" tabs shortcuts
+nnoremap <silent> <C-t> :tabnew<CR>
+nnoremap <silent> <C-Right> :tabnext<CR>
+nnoremap <silent> <C-Left> :tabprevious<CR>
+
+" backup in one place, need to create those dirs first manually
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+
+set autochdir                     " automatically cd into the dir that the file is in
+
