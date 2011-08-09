@@ -1,3 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/sqbell/ruby/rails/rails_2/where2B/db/migrate'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Network/Servers/george.dignum.pl/Users/marek.skubela/Documents/Repositories/FoggyFactorial'
+let g:netrw_dirhist_2='/Network/Servers/george.dignum.pl/Users/marek.skubela/Documents/Repositories/FoggyFactorial/app'
+let g:netrw_dirhist_3='/Network/Servers/george.dignum.pl/Users/marek.skubela/Documents/Repositories/FoggyFactorial/app/views'
+let g:netrw_dirhist_4='/Network/Servers/george.dignum.pl/Users/marek.skubela/Documents/Repositories/FoggyFactorial/app/views/tickets'
+let g:netrw_dirhist_5='/Network/Servers/george.dignum.pl/Users/marek.skubela/Documents/Repositories/FoggyFactorial'
+let g:netrw_dirhist_6='/Network/Servers/george.dignum.pl/Users/marek.skubela/Documents/Workspace/rails_3.0/DatePicker'
+let g:netrw_dirhist_7='/Network/Servers/george.dignum.pl/Users/marek.skubela/Documents/Repositories/FoggyFactorial'
