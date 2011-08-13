@@ -37,3 +37,6 @@
 [submodule "bundle/zen-coding"]
 	path = bundle/zen-coding
 	url = https://github.com/mattn/zencoding-vim.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
