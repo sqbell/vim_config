@@ -61,6 +61,7 @@ set spelllang=en,pl
 
 
 " solarIZed
+set t_Co=16
 set background=dark
 colorscheme solarized
 
