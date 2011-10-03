@@ -1,0 +1,22 @@
+<% javascript 'dynamic_states_for_person' %>
+<div id="registration-form">
+	   <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+<p id="notice"><%= notice %></p>
+	<%= form_for @person do |f| %>		
+	  	  <%= render 'people/person', :f => f %>
+
+		  <div class="form-section"> 
+		    <%= f.submit "Submit", :id => "submit", :class => "form-submit"  %>
+		  </div>
+	<% end %>
+</div>

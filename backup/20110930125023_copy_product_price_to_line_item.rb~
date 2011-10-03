@@ -1,0 +1,14 @@
+class CopyProductPriceToLineItem < ActiveRecord::Migration
+  def up
+    add_column :line_items, :price, :decimal, :precision => 8, :scale => 2
+
+    Product.all.each do |product|
+      item = LineItem.find_by_product_id(product.id)
+      if item item.update_attributes!(:price => product.price)
+    end
+  end
+
+  def down
+    remove_column :price
+  end
+end

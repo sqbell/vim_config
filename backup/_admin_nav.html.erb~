@@ -1,0 +1,35 @@
+<div id="admin-navigation-container" class="clearfix">
+  <ul id="admin-navigation">
+    <li><a href="<%= groups_path %>" class="active">Go to Admin</a></li>
+    <% if @person && current_page?( :controller => "people") && !current_page?( :controller => "people", :action => "admintool") %>
+	<li><%#= link_to "Print Basic Details", print_basic_details_person_path(@person,:format=>'pdf') %></li>
+	<li><%#= link_to "Print HR Details", print_hr_details_person_path(@person,:format=>'pdf') %></li>
+	<% elsif @people && current_page?( :controller => "people") %>
+		<% if params[:people_search] %>
+			<li><%= link_to "Print Skins List", "/print_skins_list/people.pdf?" + @url_params %></li>
+			<li><%= link_to "Print Basic Details", "/print_basic_details/people.pdf?" + @url_params %></li>
+			<li><%= link_to "Print HR Details", "/print_hr_details/people.pdf?" + @url_params  %></li>
+		<% else %>
+			<li><%= link_to "Print Skins List", "/print_skins_list/people.pdf" %></li>
+			<li><%= link_to "Print Basic Details", "/print_basic_details/people.pdf" %></li>
+			<li><%= link_to "Print HR Details", "/print_hr_details/people.pdf"  %></li>
+		<% end %>
+	<% elsif @group && current_page?( :controller => "groups", :action => "show") %>
+		<li><%= link_to "Print Skins List", print_skins_list_group_path(@group,:format=>'pdf') %></li>
+		<li><%= link_to "Print Basic Details", print_basic_details_group_path(@group,:format=>'pdf') %></li>
+		<li><%= link_to "Print HR Details", print_hr_details_group_path(@group,:format=>'pdf') %></li>
+	<% end %>
+    <% if current_page?(:controller => 'people', :action => 'show') %>
+      <li><a href="<%= edit_person_path(@person) %>" class="active">Edit This Profile</a></li>
+    <% end %>
+	<li><a href="<%= admintool_people_path %>">Edit Site Users</a></li>
+	<li><%= link_to_unless_current 'Show all custom lists', groups_path %></li>
+    <li><a href="<%= new_group_path %>">Create Custom List</a></li>
+	<% if @group && !@group.new_record? %>
+		<li><%= link_to_unless_current 'Show custom list', @group %></li>
+		<li><%= link_to_unless_current 'Edit custom list', edit_group_path(@group) %></li>
+		<li><%= link_to_unless_current 'Add talent', add_talents_group_path(@group) %></li>
+		<li><%= link_to_unless_current 'Add client', add_clients_group_path(@group) %></li>
+	<% end %>
+  </ul>
+</div>
