@@ -38,6 +38,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
+set copyindent                      " newly added; :help ci
 
 set directory=$HOME/.vim/tmp//,.    " keep swap files in one location
 
@@ -84,4 +85,9 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
 set autochdir                     " automatically cd into the dir that the file is in
+
+" 28.01.2012
+
+set nowrap
+set ttyfast
 
